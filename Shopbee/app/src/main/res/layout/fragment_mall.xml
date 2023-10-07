@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.MallFragment"
+    android:layout_marginTop="60dp">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            tools:ignore="MissingConstraints"
+            android:background="@color/colorDivider"/>
+
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/circle_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            app:ci_drawable="@drawable/bg_indicator"
+            app:layout_constraintBottom_toBottomOf="@+id/viewPager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/viewPager"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toBottomOf=" @id/viewPager"
+            android:orientation="horizontal"
+            android:gravity="center"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:drawableLeft="@drawable/ic_return_mall"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="Miễn phí trả hàng"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:drawableLeft="@drawable/ic_shield_mall"
+                android:drawablePadding="5dp"
+                android:text="Chính hãng 100%"
+                android:textColor="@color/colorTextSecondary"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:drawableLeft="@drawable/ic_free_delivery_mall"
+                android:drawablePadding="5dp"
+                android:text="Giao miễn phí"
+                android:textColor="@color/colorTextSecondary"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:layout_marginLeft="15dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_shopee_mall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout"
+            android:gravity="center"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:id="@+id/shopee_premium"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_diamond"
+                    android:background="@drawable/bg_mall"/>
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text="SHOPEE PREMIUM"
+                    android:textSize="9sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/shopee_mum_club"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_mum_club"
+                    android:background="@drawable/bg_mall"/>
+                <TextView
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:text="SHOPEE MUM'S CLUB "
+                    android:textSize="9sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/shopee_beauty_club"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_beauty_club"
+                    android:background="@drawable/bg_mall"/>
+                <TextView
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:text="SHOPEE BEAUTY CLUB"
+                    android:textSize="9sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/shopee_block_club"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_book_clus"
+                    android:background="@drawable/bg_mall"/>
+                <TextView
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:text="SHOPEE BLOCK CLUB"
+                    android:textSize="9sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/shopee_thuong_hieu"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_thanh_vien_thuong_hieu"
+                    android:background="@drawable/bg_mall"/>
+                <TextView
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:text="THÀNH VIÊN THƯƠNG HIỆU"
+                    android:textSize="8.5sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/shopee_quoc_te"
+                android:layout_width="68dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_thuong_hieu_quoc_te"
+                    android:background="@drawable/bg_mall"/>
+                <TextView
+                    android:layout_width="75dp"
+                    android:layout_height="wrap_content"
+                    android:text="THƯƠNG HIỆU QUỐC TẾ"
+                    android:textSize="8.5sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_Image_Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout_shopee_mall">
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <com.makeramen.roundedimageview.RoundedImageView
+                   android:layout_width="match_parent"
+                   android:layout_height="120dp"
+                   android:scaleType="centerCrop"
+                   android:src="@drawable/img_khuyen_mai"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:riv_corner_radius="10dp" />
+
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginEnd="4dp"
+                   android:src="@drawable/ic_next_btn_mall"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_rcv_mall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout_Image_Button">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="THƯƠNG HIỆU NỔI BẬT TRONG NGÀY"
+                android:textSize="14sp"
+                android:textColor="@color/color_view_countdown"
+                android:fontFamily="@font/roboto_medium"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                app:cardCornerRadius="5dp"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/img_danisa"
+                    android:paddingRight="5dp"/>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout_Category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout_rcv_mall">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Danh mục"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:paddingLeft="5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Tìm hiểu ngay"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        android:paddingLeft="50dp"
+                        android:drawableRight="@drawable/ic_right_arrow"/>
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        android:layout_margin="20dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/mall_resp_img1"
+                                android:layout_width="match_parent"
+                                android:layout_height="61dp"
+                                android:src="@drawable/profile_item1" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Đã mua 1 lần"
+                                android:textSize="10dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="64dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="₫10.000" />
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="10dp"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/mall_resp_img2"
+                                android:layout_width="match_parent"
+                                android:layout_height="61dp"
+                                android:src="@drawable/profile_item2" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Đã mua 1 lần"
+                                android:textSize="10dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="64dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="₫10.000" />
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="10dp"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_margin="20dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/mall_resp_img3"
+                                android:layout_width="match_parent"
+                                android:layout_height="61dp"
+                                android:src="@drawable/profile_item3" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Đã mua 1 lần"
+                                android:textSize="10dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="64dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="₫10.000" />
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="10dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_margin="20dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/mall_resp_img4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:src="@drawable/profile_item2" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Đã mua 1 lần"
+                                android:textSize="10dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="64dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="₫10.000" />
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="10dp"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recyclerFlashSales1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout_Category">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerFlashSales"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"
+                tools:layout_editor_absoluteX="170dp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerProductMall"
+            android:layout_width="match_parent"
+            android:layout_height="1000dp"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerFlashSales1"
+            tools:layout_editor_absoluteX="67dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

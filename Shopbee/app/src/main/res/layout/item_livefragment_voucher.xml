@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp">
+
+    <LinearLayout
+        android:id="@+id/ln1"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:orientation="vertical">
+        <ImageView
+            android:src="@mipmap/slide1"
+            android:id="@+id/imgVoucher"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:background="@drawable/rounded_voucher"/>
+        <TextView
+            android:id="@+id/txtVoucherName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voucher"
+            android:textSize="10dp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
